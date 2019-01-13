@@ -5,6 +5,7 @@
 import http.server
 import requests
 from urllib.parse import unquote, parse_qs
+import os
 
 memory ={}
 
@@ -109,6 +110,7 @@ class Shortener(http.server.BaseHTTPRequestHandler):
   
           
 if __name__ = '__main__':
-    server_address = ('', 8000)
-    httpd = http.serverHTTPSever(server_address, Shortener)
+    port = int(os.environ.get('PORT', 8000))
+    server_address = ('', port)
+    httpd = http.server.HTTPSever(server_address, Shortener)
     httpd.serve_forever()
