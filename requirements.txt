@@ -15,7 +15,7 @@ docutils==0.14
 idna==2.6
 jmespath==0.9.3
 jsonschema==2.6.0
-lxml==4.2.5
+lxml==4.9.1
 pathspec==0.5.5
 python-dateutil==2.7.5
 python-docx==0.8.7
